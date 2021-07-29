@@ -6,12 +6,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
   <section>
+    <label for="inputSortBy">Sort By</label>
+      <select id="inputSortBy" class="form-control col-lg-3">
+        <option selected>Task Name</option>
+        <option>Assigned To</option>
+        <option>Due Date</option>
+        <option>Priority</option>
+      </select>
     <table class="table table-hover">
-    <button>Press Me</button>
+      <button id="add-task-button">+</button>
       <thead>
         <tr>
           <th id="table-title" class="col" colspan="5" scope="col">Home</th>
@@ -29,7 +37,7 @@
           <td>sprint 1</td>
           <td id="first" class="assigned">Israel</tdcl>
           <td>7/29/2021</td>
-          <td class="status bg-warning">medium-priority</td>
+          <td class="status bg-danger">To-do</td>
           <td>
             <button class="btn btn-link" aria-expanded="false" aria-controls="seedSpecial" data-target="#seedSpecial"
               data-toggle="collapse">
@@ -44,7 +52,7 @@
           <td>sprint 2</td>
           <td id="second" class="assigned">Anuradha</td>
           <td>8/15/2021</td>
-          <td class="status bg-success">Low-priority</td>
+          <td class="status bg-warning">In progress</td>
           <td><button class="btn btn-link" aria-expanded="false" aria-controls="seedSpecial" data-target="#seedSpecial"
               data-toggle="collapse">
               Description...
@@ -58,7 +66,7 @@
           <td>sprint 3</td>
           <td id="third" class="assigned">Chavela</td>
           <td>8/30/2021</td>
-          <td class="status bg-warning">medium-priority</td>
+          <td class="status bg-success">Review</td>
           <td>
             <button class="btn btn-link" aria-expanded="false" aria-controls="seedSpecial" data-target="#seedSpecial"
               data-toggle="collapse">
@@ -73,8 +81,23 @@
           <td>final</td>
           <td id="fourth" class="assigned">David</td>
           <td>8/20/2021</td>
-          <td class="status bg-danger">high-priority</td>
+          <td class="status bg-primary">Done</td>
           <td><button class="btn btn-link" aria-expanded="false" aria-controls="seedSpecial" data-target="#seedSpecial"
+              data-toggle="collapse">
+              Description...
+            </button>
+            <p class="collapse" id="seedSpecial">
+              Use promo code "GGarden" for additional 15% off your entire purchase!
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>sprint 1</td>
+          <td id="first" class="assigned">Israel</tdcl>
+          <td>7/29/2021</td>
+          <td class="status bg-danger">To-do</td>
+          <td>
+            <button class="btn btn-link" aria-expanded="false" aria-controls="seedSpecial" data-target="#seedSpecial"
               data-toggle="collapse">
               Description...
             </button>
@@ -86,8 +109,55 @@
       </tbody>
     </table>
 
-    
+
   </section>
+  <!--  forms -->
+  <form class="container d-flex flex-column">
+    <h3>Add Task Form</h3>
+      <div class="form-group col-lg-12">
+        <label for="inputName">Task Name</label>
+        <input type="email" class="form-control" id="inputName">
+      </div>
+      <div class="form-group col-lg-12">
+        <label for="inputAssignedTo">Assigned To</label>
+        <input type="password" class="form-control" id="inputAssignedTo">
+      </div>
+    
+    <div class="form-group col-lg-12">
+      <label for="inputDate">Due Date</label>
+      <input type="date" class="form-control" id="inputDate" placeholder="">
+    </div>
+    <div class="form-group col-lg-12">
+      <label for="inputStatus">Status</label>
+      <select id="inputState" class="form-control">
+        <option selected>TO-DO</option>
+        <option>In progress</option>
+        <option>Review</option>
+        <option>Done</option>
+      </select>
+    </div>
+    <div class="form-group col-lg-12">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button class="btn btn-primary col-md-5">Submit</button>
+  </form>
+
+
+  <!-- card -->
+  
+  <!-- Task Card -->
+  <!-- <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div> -->
+
   <footer></footer>
 
 

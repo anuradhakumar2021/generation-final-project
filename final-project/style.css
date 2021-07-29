@@ -50,3 +50,51 @@ section {
 #table-title {
   text-align: center;
 }
+
+#add-task-button{
+  float: right;
+  position: relative;
+  right: 15px;
+  bottom: 10px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+form{
+  border: 2px solid black;
+  width: 30%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.btn{
+  margin:0 auto;
+  display: block;
+}
+
+form h3{
+  text-align: center;
+}
+
+@media only screen and (max-width:700px){
+  form{
+    width:70%;
+  }
+}
+
+@media only screen and (max-width:800px){
+  form{
+    width:50%;
+  }
+}
+
+
+section label{
+  position: relative;
+    top: 32px;
+}
+section select{
+  position: relative;
+    top: 32px;
+}
