@@ -1,7 +1,8 @@
 //creating a class to manage the tasks, adding a method to the class to keep track of tasks in our application, and connecting up the New Task form to create tasks.
 
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
-  const html = `<tr>
+const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
+  const html = `<tr data-task-id="${id}">
+  <td><button class="done-button">X</button></td>
     <td>${name}</td>
     <td id="first" class="assigned">${assignedTo}</td>
     <td>${dueDate}</td>
@@ -47,6 +48,16 @@ class TaskManager {
     this.tasks.push(task);
   };
 
+  getTaskById = (taskId) => {
+    let foundTask;
+    for (let i = 0; i < this.tasks.length; i++) {
+      if (taskId == this.tasks[i].currentId) {
+        foundTask = this.tasks[i];
+        return foundTask;
+      }
+    }
+  };
+
   render = () => {
     let taskHtmlList = [];
     for (let i = 0; i < this.tasks.length; i++) {
@@ -60,7 +71,8 @@ class TaskManager {
         task.description,
         task.assignedTo,
         formattedDate,
-        task.status
+        task.status,
+        task.currentId
       );
       taskHtmlList.push(taskHtml);
     }

@@ -8,6 +8,7 @@ let navBar = document.getElementById('navbar');
 let submitButton = document.getElementById('submit-button');
 let tablesContainer = document.getElementById('tables-container');
 let tableBody = document.querySelector('#table-body');
+let tasksList = document.querySelector('#tasks-list');
 
 //Changes form display from none to block
 showFormButton.addEventListener('click', () => {
@@ -80,4 +81,13 @@ submitButton.addEventListener('click', () => {
   }
 });
 
+//Listen for a click on tasks-list
+tasksList.addEventListener('click', (event) => {
+  if (event.target.className === 'done-button') {
+    let taskId = event.target.parentElement.parentElement.dataset.taskId;
+    let task = table.getTaskById(taskId);
+    task.status = 'DONE';
+    table.render();
+  }
+});
 console.log(table.tasks);

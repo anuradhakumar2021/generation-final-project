@@ -28,13 +28,14 @@
 
   <!-- Task Manager Table -->
   <section id="tables-container">
-    <table class="table table-hover">
+    <table id="tasks-list" class="table table-hover">
       <button id="show-form">+</button>
       <thead>
         <tr>
-          <th id="table-title" class="col" colspan="5" scope="col">Home</th>
+          <th id="table-title" class="col" colspan="6" scope="col">Home</th>
         </tr>
         <tr>
+          <th scope="col">Check Complete</th>
           <th scope="col">Task Name</th>
           <th scope="col">Assigned to</th>
           <th scope="col">Due Date</th>
@@ -43,7 +44,9 @@
         </tr>
       </thead>
       <tbody id="table-body">
-        <tr>
+        <tr id="1">
+          
+          <td><button class="done-button">X</button></td>
           <td>sprint 1</td>
           <td id="first" class="assigned">Israel</tdcl>
           <td>7/29/2021</td>
@@ -58,7 +61,8 @@
             </p>
           </td>
         </tr>
-        <tr>
+        <tr id="2">
+          <td><button class="done-button">X</button></td>
           <td>sprint 2</td>
           <td id="second" class="assigned">Anuradha</td>
           <td>08/29/2021</td>
@@ -72,7 +76,8 @@
             </p>
           </td>
         </tr>
-        <tr>
+        <tr id="3">
+          <td><button class="done-button">X</button></td>
           <td>sprint 3</td>
           <td id="third" class="assigned">Chavela</td>
           <td>8/30/2021</td>
@@ -87,10 +92,11 @@
             </p>
           </td>
         </tr>
-        <tr>
+        <tr data-task-id="4" id="4">
+          <td><button class="done-button">X</button></td>
           <td>final</td>
           <td id="fourth" class="assigned">David</td>
-          <td>Otto</td>
+          <td>03/23/2021</td>
           <td class="status bg-danger">Done</td>
           <td><button class="btn btn-link" aria-expanded="false" aria-controls="message" data-target="#message"
               data-toggle="collapse">
