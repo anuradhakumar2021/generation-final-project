@@ -12,7 +12,7 @@ let tasksList = document.querySelector('#tasks-list');
 
 //Changes form display from none to block
 showFormButton.addEventListener('click', () => {
-  addTaskForm.style.display = 'block';
+  addTaskForm.style.bottom = '700px';
   tablesContainer.style.filter = 'blur(4px)';
 });
 
@@ -76,7 +76,7 @@ submitButton.addEventListener('click', () => {
     descriptionInput.value = '';
 
     //Hide form and remove blur effect from table
-    addTaskForm.style.display = 'none';
+    addTaskForm.style.bottom = '1313px';
     tablesContainer.style.filter = 'initial';
   }
 });
@@ -90,4 +90,5 @@ tasksList.addEventListener('click', (event) => {
     table.render();
   }
 });
+
 console.log(table.tasks);

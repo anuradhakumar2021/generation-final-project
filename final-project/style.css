@@ -6,7 +6,7 @@ dark-green-#0f785a;
 lightblue-#60a2fa
 */
 * {
-  transition: all ease 0.3;
+  transition: all ease 0.5s;
 }
 
 button {
@@ -56,9 +56,8 @@ section {
 }
 
 #add-task-form {
-  display: none;
   position: relative;
-  bottom: 700px;
+  bottom: 1313px;
   background-color: blue;
   color: white;
   padding: 15px;
