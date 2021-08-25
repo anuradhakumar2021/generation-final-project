@@ -10,9 +10,11 @@ let tablesContainer = document.getElementById('tables-container');
 let tableBody = document.querySelector('#table-body');
 let tasksList = document.querySelector('#tasks-list');
 
+table.load();
+table.render();
 //Changes form display from none to block
 showFormButton.addEventListener('click', () => {
-  addTaskForm.style.bottom = '700px';
+  addTaskForm.style.top = '23px';
   tablesContainer.style.filter = 'blur(4px)';
 });
 
@@ -69,6 +71,7 @@ submitButton.addEventListener('click', () => {
       descriptionInput.value
     );
     table.render();
+    table.save();
     nameInput.value = '';
     assignedInput.value = '';
     dueDateInput.value = '';
@@ -76,7 +79,7 @@ submitButton.addEventListener('click', () => {
     descriptionInput.value = '';
 
     //Hide form and remove blur effect from table
-    addTaskForm.style.bottom = '1313px';
+    addTaskForm.style.top = '-592px';
     tablesContainer.style.filter = 'initial';
   }
 });
@@ -88,7 +91,6 @@ tasksList.addEventListener('click', (event) => {
     let task = table.getTaskById(taskId);
     task.status = 'DONE';
     table.render();
+    table.save();
   }
 });
-
-console.log(table.tasks);
