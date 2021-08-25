@@ -56,11 +56,13 @@ section {
 }
 
 #add-task-form {
-  position: relative;
-  bottom: 1313px;
+  top: -592px;
   background-color: blue;
   color: white;
   padding: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #add-task-form h2 {
