@@ -1,2 +1,2 @@
 ﻿# generation-final-project
-Project URL: https://israelone.github.io/generation-final-project/final-project/final-project.html
+Project URL: https://anuradhakumar2021.github.io/generation-final-project/final-project/final-project.html
